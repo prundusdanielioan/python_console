@@ -3,7 +3,6 @@ if __name__ == "__main__":
     db_connection = connect_to_db("localhost", "sales", "root", "")
 
     if db_connection:
-        #dbxcvxcvx
         print("conectat")
         table_data = select_from_table(db_connection, "products")
 
