@@ -12,7 +12,7 @@ if __name__ == "__main__":
                 print(row)
 
             # print(tabulate(table_data, headers=columns, tablefmt="pretty"))
-
+#sdbcmbcmsdbcs
         # # Example: Execute a custom query (Insert new data)
         custom_query = "INSERT INTO products (name, quantity) VALUES ('new product', 30);"
 
