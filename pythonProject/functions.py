@@ -36,13 +36,6 @@ def edit_qty(db_connection):
     print(f"[green]\nAi selectat: {selected_id}[/green]\n")
 
 
-
-
-
-
-
-
-
 def edit_name(db_connection):
     table_data = select_from_table(db_connection, table_products)
     choices = [f"{record[0]}: {record[1]}" for record in table_data]
@@ -108,13 +101,13 @@ def main_menu():
                 'menu',
                 message="Select an option:",
                 choices=[
-                    "1. List products",
-                    "2. Update Quantity",
-                    "3. Add product",
-                    "4. Change name",
-                    "5. Delete product",
-                    "6. Exit",
-                    "7. List product types"
+                    meniu_option1,
+                    meniu_option2,
+                    meniu_option3,
+                    meniu_option4,
+                    meniu_option5,
+                    meniu_option6,
+                    meniu_option7,
 
                 ]
             )
@@ -124,21 +117,21 @@ def main_menu():
         # Verifică selecția utilizatorului
         choice = answer['menu']
 
-        if choice == "1. List products":
+        if choice == meniu_option1:
             list_products(db_connection)
-        elif choice == "2. Update Quantity":
+        elif choice == meniu_option2:
             edit_qty(db_connection)
-        elif choice == "3. Add product":
+        elif choice == meniu_option3:
             add_product(db_connection)
-        elif choice == "4. Change name":
+        elif choice == meniu_option4:
             edit_name(db_connection)
-        elif choice == "5. Delete product":
+        elif choice == meniu_option5:
             delete_product(db_connection)
-        elif choice == "6. Exit":
+        elif choice == meniu_option6:
+            list_product_types(db_connection)
+        elif choice == meniu_option7:
             print("Exiting the program.")
             break
-        elif choice == "7. List product types":
-            list_product_types(db_connection)
 
         else:
             print("Invalid option, please try again.")
