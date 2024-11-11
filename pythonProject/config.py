@@ -1,0 +1,5 @@
+mysql_local_host = "localhost"
+mysql_database = "sales"
+mysql_user = "root"
+mysql_pass = ""
+table_products = "products"

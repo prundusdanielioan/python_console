@@ -1,5 +1,4 @@
 import pymysql
-from tabulate import tabulate  # Import tabulate for formatting the table
 
 def connect_to_db(host, database, user, password):
     try:
